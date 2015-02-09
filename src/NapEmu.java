@@ -8,8 +8,10 @@
  *
  * @author Bonjour
  */
+
 import common.Database;
 import game.GameServer;
+
 import realm.RealmServer;
 
 public class NapEmu
@@ -23,9 +25,11 @@ public class NapEmu
 "██║╚██╗██║██╔══██║██╔═══╝ ██╔══╝  ██║╚██╔╝██║██║   ██║\n" +
 "██║ ╚████║██║  ██║██║     ███████╗██║ ╚═╝ ██║╚██████╔╝\n" +
 "╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝     ╚═╝ ╚═════╝");
-    System.out.println("Lancement de l'emu Nap'Emu ! ");
+    
+      System.out.println("Lancement de l'emu Nap'Emu ! ");
   
 
+     
     RealmServer.start();
     GameServer.start();
     Database.connect();

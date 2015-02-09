@@ -11,9 +11,8 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 public class MinaServer
 {
-  private static final String OUT_EOP = "";
-  private static final String IN_EOP = "";
-  private static final int BUFFER = 512;
+
+  
   public static final int DECO_TIME = 900;
   public static final String DOFUS_VER = "1.29.1";
   protected final NioSocketAcceptor acceptor = new NioSocketAcceptor();

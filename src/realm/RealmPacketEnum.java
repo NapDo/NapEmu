@@ -13,12 +13,9 @@ public enum RealmPacketEnum
   PSEUDO("Ad"),  
   COMMUNITY("Ac", "0"), 
   HOSTS_LIST("AH", "1;1;110;1"), 
-  
   LOGIN_OK("AlK"),  
   QUESTION("AQ"),  
   SELECT_SERVER("AYK"),  
-  
-  
   SELECT_SERVER_CRYPT("AXK"),  
   SERVER_LIST("AxK31536000000|1,2");
   
