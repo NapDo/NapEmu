@@ -26,8 +26,6 @@ public class NapEmu
     System.out.println("Lancement de l'emu Nap'Emu ! ");
   
 
-
-
     RealmServer.start();
     GameServer.start();
     Database.connect();

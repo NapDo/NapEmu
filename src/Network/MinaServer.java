@@ -41,8 +41,8 @@ public class MinaServer
         try {
             _acceptor.getManagedSessions().values().stream().filter((session) -> !(session == null || session.isClosing())).forEach((session) -> {
                 session.close(true);
-            }); /* _acceptor.unbind();
-            _acceptor.dispose(false);*/
+            }); 
+            
         } catch (Exception e) {
         }
     }
