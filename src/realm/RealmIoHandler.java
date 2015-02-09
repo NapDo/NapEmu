@@ -1,15 +1,16 @@
 package realm;
 
 import Network.MinaIoHandler;
-import base.Account;
-import base.DatabaseAccount;
+import base.objects.Account;
+import base.objects.DatabaseObjects.DatabaseAccount;
+import game.Events.Ae;
 import java.util.Random;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
 
 public class RealmIoHandler extends MinaIoHandler
 {
-    private static Random _rand = new Random();
+    private static final Random _rand = new Random();
     
   
   
@@ -78,6 +79,9 @@ public class RealmIoHandler extends MinaIoHandler
                                 case 'x':
                                     RealmPacketEnum.SERVER_LIST.send(session);
                                     break;
+                                 case 'X':
+                                    Ae.ListServers(session, packet.substring(2));
+                                              break;
                             }
     }
     }
@@ -103,7 +107,11 @@ public class RealmIoHandler extends MinaIoHandler
     throws Exception
   {
     super.sessionClosed(session);
-    System.out.println("Logout");
+    Account acc = (Account)session.getAttribute("account");
+     if(acc != null){
+                acc.removeSession();
+            }
+    System.out.println("Fermeture d'une connexion ");
   }
   
     @Override

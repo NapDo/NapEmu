@@ -17,7 +17,7 @@ public enum RealmPacketEnum
   QUESTION("AQ"),  
   SELECT_SERVER("AYK"),  
   SELECT_SERVER_CRYPT("AXK"),  
-  SERVER_LIST("AxK31536000000|1,2");
+  SERVER_LIST("AxK31536000000|1,5");
   
   private String packet;
   private String param;

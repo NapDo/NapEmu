@@ -2,6 +2,7 @@ package game;
 
 import Network.MinaIoHandler;
 import game.Events.Ae;
+import game.Events.Ce;
 import org.apache.mina.core.session.IoSession;
 
 public class GameIoHandler extends MinaIoHandler
@@ -19,13 +20,10 @@ public class GameIoHandler extends MinaIoHandler
   }
   
   @Override
-  public void messageReceived(IoSession session, Object message)
-    throws Exception
+  public void messageReceived(IoSession session, Object message) throws Exception
   {
     RECV += 1;
-    
-
-
+  
     String packet = ((String)message).trim();
     if (packet.length() > 1)
     {
@@ -35,15 +33,21 @@ public class GameIoHandler extends MinaIoHandler
         session.close(true);
         return;
       }
-      switch (packet.charAt(0))
-      {
+   switch (packet.charAt(0)) {
       case 'A': 
-        switch (packet.charAt(1))
-        {
-        case 'T': 
+        switch (packet.charAt(1)) {
+         case 'T': 
           Ae.onAttach(session, packet.substring(2));
-        }
-        break;
+        
+          break;
+          case 'L':
+       Ae.ListPersos(session);
+                            
+            break;
+            case 'M': //character add
+        Ce.onCharacterAdd(session, packet.substring(2));
+            break;
+        }    
       case 'c': 
         switch (packet.charAt(1))
         {
@@ -52,6 +56,7 @@ public class GameIoHandler extends MinaIoHandler
         }
         break;
       }
+      
     }
   }
 }

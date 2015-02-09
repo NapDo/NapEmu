@@ -1,5 +1,6 @@
-package base;
+package base.objects.DatabaseObjects;
 
+import base.objects.Account;
 import common.Database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,6 +19,10 @@ public class DatabaseAccount
     }
     return account;
   }
+
+    public static Object Account() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
   private final Map<String, Account> accName = new ConcurrentHashMap();
   private final Map<Integer, Account> accID = new ConcurrentHashMap();
