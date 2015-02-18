@@ -83,6 +83,13 @@ public class Account
 
         return packet.toString();
     }
+        public Characters getCharacter(int id){
+        return getCharacters().get(id);
+    }
+    public Characters getPerso(int id){
+        return getCharacters().get(id);
+    }
+    
 }
 
    

@@ -21,7 +21,11 @@ public class Ae
     }
     InetSocketAddress ISA = (InetSocketAddress)session.getRemoteAddress();
     acc.setSession(session);
-    Player p = acc.getWaitingCharacter();
+    GamePacket.CHARCTERS_LIST.send(session, acc.getPersoL());
+     
+
+
+               Player p = acc.getWaitingCharacter();
             session.setAttribute("player", p);
             
             if(p == null){
@@ -30,7 +34,7 @@ public class Ae
 
         
             p.setSession(session);
-
+           
             //génération du packet ASK
             StringBuilder param = new StringBuilder();
 
@@ -38,8 +42,6 @@ public class Ae
                     .append(p.getLevel()).append("|").append(p.getClassID()).append("|")
                     .append(p.getSexe()).append("|").append(p.getGfxID()).append("|")
                     .append(implode("|", p.getColors())).append("|");
-
-           
             
             GamePacket.ACCOUNT_ATTACH_OK.send(session, param);
         

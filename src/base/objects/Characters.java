@@ -7,12 +7,12 @@ package base.objects;
 
 /**
  *
- * @author Bonjour
+ * @author NapDo
  */
 public class Characters {
      public int id;
     public String name;
-    public int accountId;
+    public int accID;
     public int level = 1;
     public int color1;
     public int color2;
@@ -26,7 +26,7 @@ public class Characters {
     public short startCell;
     public String baseStats;
     public byte orientation = 0;
-    private final Player _player = null;
+    private Player _player = null;
 
     public String getForALK() {
         StringBuilder perso = new StringBuilder();
@@ -43,6 +43,12 @@ public class Characters {
         perso.append(";");//DeathCount	this.deathCount;
         perso.append(";");//LevelMax
         return perso.toString();
+    }
+   public Player getPersos() {
+        if (_player == null) {
+            _player = new Player(this);
+        }
+        return _player;
     }
 
  public void logout() {

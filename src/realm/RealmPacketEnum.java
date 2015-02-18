@@ -3,6 +3,7 @@ package realm;
 import org.apache.mina.core.session.IoSession;
 
 public enum RealmPacketEnum
+
 {
   HELLO_CONNECTION("HC"),  
   REQUIRE_VERSION("AlEv", "1.29.1"), 
@@ -17,10 +18,10 @@ public enum RealmPacketEnum
   QUESTION("AQ"),  
   SELECT_SERVER("AYK"),  
   SELECT_SERVER_CRYPT("AXK"),  
-  SERVER_LIST("AxK31536000000|1,5");
+  SERVER_LIST("AxK31536000000|1,2");
   
-  private String packet;
-  private String param;
+  private final String packet;
+  private final String param;
   
   private RealmPacketEnum(String packet)
   {

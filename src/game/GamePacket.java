@@ -29,6 +29,12 @@ public enum GamePacket
     CREATE_CHARACTER_OK("AAK"),
      
     TUTORIAL_START("TB"),
+      SELECT_CHARACTER_ERROR("ASE"),
+    /**
+     * sélection du personnage Ok
+     */
+    SELECT_CHARACTER_OK("ASK"),
+    
     
      
   CHARCTERS_LIST("ALK31536000000|");

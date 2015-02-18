@@ -42,7 +42,7 @@ public class DatabaseCharacters {
 
             p.id = RS.getInt("id");
             p.name = RS.getString("name");
-            p.accountId = RS.getInt("account");
+            p.accID = RS.getInt("account");
             p.classId = RS.getByte("class");
             p.color1 = RS.getInt("color1");
             p.color2 = RS.getInt("color2");
@@ -72,7 +72,7 @@ public class DatabaseCharacters {
                 createStatement.setInt(4, p.color1);
                 createStatement.setInt(5, p.color2);
                 createStatement.setInt(6, p.color3);
-                createStatement.setInt(7, p.accountId);
+                createStatement.setInt(7, p.accID);
                 createStatement.setInt(8, p.gfxid);
                 createStatement.setShort(9, p.lastMap);
                 createStatement.setShort(10, p.lastCell);

@@ -19,7 +19,7 @@ public class Command {
     public static void exit (){
         Scanner sc = new Scanner(System.in);        
         String ex = sc.nextLine();
-        System.exit(1);
+        System.out.println("d");
       
     }
             

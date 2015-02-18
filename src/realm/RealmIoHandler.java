@@ -4,6 +4,7 @@ import Network.MinaIoHandler;
 import base.objects.Account;
 import base.objects.DatabaseObjects.DatabaseAccount;
 import game.Events.Ae;
+import game.Events.Ce;
 import java.util.Random;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -82,10 +83,21 @@ public class RealmIoHandler extends MinaIoHandler
                                  case 'X':
                                     Ae.ListServers(session, packet.substring(2));
                                               break;
-                            }
+                                        case 'L':
+                                   
+                                            Ae.ListPersos(session);
+                                            break;
+                                              case 'S':
+                                 
+                                        Ce.onCharacterSelected(session, packet.substring(2));
+                              
+                          
     }
+             break;           
     }
+          
     
+  }
   }
   
   @Override

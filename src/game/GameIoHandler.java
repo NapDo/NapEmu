@@ -33,31 +33,33 @@ public class GameIoHandler extends MinaIoHandler
         session.close(true);
         return;
       }
-   switch (packet.charAt(0)) {
-      case 'A': 
-        switch (packet.charAt(1)) {
-         case 'T': 
-          Ae.onAttach(session, packet.substring(2));
-        
-          break;
-          case 'L':
-       Ae.ListPersos(session);
-                            
-            break;
-            case 'M': //character add
-        Ce.onCharacterAdd(session, packet.substring(2));
-            break;
-        }    
-      case 'c': 
-        switch (packet.charAt(1))
-        {
-        case 'C': 
-          session.write(packet);
-        }
-        break;
-      }
+     switch (packet.charAt(0)) {
+                case 'A': //packet perso / compte
+                    switch (packet.charAt(1)) {
+                        case 'T': //attache account
+                            Ae.onAttach(session, packet.substring(2));
+                            break;
+                        case 'L':
+                            Ae.ListPersos(session);
+                            break;
+                        case 'P': //name generator
+                           // Ce.onNameGenerator(session);
+                            break;
+                        case 'A': //character add
+                            Ce.onCharacterAdd(session, packet.substring(2));
+                            break;
+                        case 'S': //character selected
+                            Ce.onCharacterSelected(session, packet);
+                            break;
+                        case 'D': //delete
+                          // Ce.onDelete(session, packet.substring(2));
+                            break;
+                    }
+                    break;
       
-    }
+    
+  }
+}
   }
 }
 
