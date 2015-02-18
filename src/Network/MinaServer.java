@@ -1,5 +1,9 @@
 package Network;
 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.charset.Charset;

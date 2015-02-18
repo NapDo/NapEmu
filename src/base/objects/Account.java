@@ -1,3 +1,6 @@
+/**
+@atMohammed TABIT <nap.software@gmail.com>
+* */
 package base.objects;
 
 import base.objects.DatabaseObjects.DatabaseCharacters;

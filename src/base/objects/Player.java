@@ -7,9 +7,10 @@ package base.objects;
 
 import org.apache.mina.core.session.IoSession;
 
+
 /**
  *
- * @author Bonjour
+ * @author Mohammed TABIT <nap.software@gmail.com>
  */
 public class Player {
 

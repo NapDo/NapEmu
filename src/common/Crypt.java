@@ -1,4 +1,11 @@
+
 package common;
+
+
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 
 import java.security.MessageDigest;
 

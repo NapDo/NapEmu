@@ -1,5 +1,9 @@
 package realm;
 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 import Network.MinaIoHandler;
 import base.objects.Account;
 import base.objects.DatabaseObjects.DatabaseAccount;

@@ -1,5 +1,9 @@
 package common;
 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

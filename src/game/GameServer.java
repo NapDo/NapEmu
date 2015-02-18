@@ -1,5 +1,9 @@
 package game;
 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 import Network.MinaServer;
 import java.io.IOException;
 

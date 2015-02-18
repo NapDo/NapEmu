@@ -1,4 +1,9 @@
  package Network;
+ 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;

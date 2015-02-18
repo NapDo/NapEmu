@@ -1,5 +1,9 @@
 package base.objects.DatabaseObjects;
 
+/**
+ *
+ * @author Mohammed TABIT <nap.software@gmail.com>
+ */
 import base.objects.Account;
 import common.Database;
 import java.sql.PreparedStatement;
