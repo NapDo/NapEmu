@@ -148,5 +148,3 @@ public class RealmIoHandler extends MinaIoHandler
     return b.toString();
   }
 }
-
-

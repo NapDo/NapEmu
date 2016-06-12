@@ -7,7 +7,7 @@ package realm;
 import Network.MinaServer;
 import java.io.IOException;
 
-public class RealmServer {
+public  class RealmServer   {
     
     
   protected MinaServer _server;
@@ -21,9 +21,9 @@ public class RealmServer {
     {
 
       System.out.println("Lancement du Realm : ");
-      _server = new MinaServer(port, new RealmIoHandler());
+      _server = new MinaServer(port, new RealmIoHandler()) {};
       System.out.println("Ok");
-      System.out.println("port"+ port+ "Accepté");
+      System.out.println("Port"+ port + " accepté");
     }
     catch (IOException e)
     {

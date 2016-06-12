@@ -39,7 +39,7 @@ public class Ae
         
             p.setSession(session);
            
-            //génération du packet ASK
+  
             StringBuilder param = new StringBuilder();
 
             param.append('|').append(p.getID()).append("|").append(p.getName()).append("|")
@@ -63,6 +63,7 @@ public class Ae
         
     }
       
+   
   public static void ListServers(IoSession session, String data)
   {
     String ip = "127.0.0.1";

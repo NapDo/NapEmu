@@ -27,9 +27,10 @@ public class NapEmu
   
 
      
+    
+    Database.connect();
     RealmServer.start();
     GameServer.start();
-    Database.connect();
   }
 }
 

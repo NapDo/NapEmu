@@ -30,8 +30,8 @@ public class Database
     
       dsn.append("jdbc:mysql://");
       dsn.append("127.0.0.1");
-      dsn.append("/").append("test");
-       this.connect = DriverManager.getConnection(dsn.toString(), "", "");
+      dsn.append("/").append("napemu");
+       this.connect = DriverManager.getConnection(dsn.toString(), "root", "");
     
         System.out.println("Database connected!");
     }

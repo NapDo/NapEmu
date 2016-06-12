@@ -19,9 +19,10 @@ public class GameServer
     try
     {
       System.out.println("Lancement du Game : ");
-      this._server = new MinaServer(port, new GameIoHandler());
+      this._server = new MinaServer(port, new GameIoHandler()) {};
       System.out.println("Ok");
       System.out.println("port " + port + " accepté");
+   
     }
     catch (IOException e)
     {
@@ -42,6 +43,7 @@ public class GameServer
   {
     System.out.println("Arrêt du Game : ");
     instance._server.stop();
+   
     System.out.println("ok");
   }
 }

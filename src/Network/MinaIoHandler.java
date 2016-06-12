@@ -8,8 +8,7 @@
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
  
-public class MinaIoHandler
-  extends IoHandlerAdapter
+public class MinaIoHandler extends IoHandlerAdapter
 {
   @Override
   public void messageSent(IoSession session, Object message)
