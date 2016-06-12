@@ -6,3 +6,8 @@ Développer mes cappacités en java
 
 #Libs utilisées :
 Mina Apache
+
+#Remerciementss :
+Nicolas (Baskwo) pour ses magnifiques remarques et son soutient.
+Vincent (v4vx) pour ses magnifiques coups de mains
+
